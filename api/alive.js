@@ -12,7 +12,6 @@ const upsStatusRegex = /\b(Normal|Battery Power)\b/;
 //ROUTES//
 // default welcome message when presented with simple GET
 router.get('/', (req, res) => {
-  console.log(path.join(__dirname,`${process.env.PRIV_KEY_PATH}`));
   var conn = new Client();
 
   conn.on('ready', function(error) {
@@ -33,7 +32,7 @@ router.get('/', (req, res) => {
             running_version: 'v1.0'
           });
         }
-        // output okay return output
+        // return okay return output
         res.statusCode = 200;
         res.json({
           message: match[0],
