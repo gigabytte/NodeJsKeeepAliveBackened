@@ -8,7 +8,7 @@ const cors = require('cors');
 
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 
-const api = require('./api');
+const api = require('./api/v1');
 const app = express();
 
 //middleware
