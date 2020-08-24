@@ -1,0 +1,6 @@
+{
+    "UPS_PWER_SUPPLY": "(Power Supply by.*(Utility Power|Battery Power))",
+    "UPS_BATTERY_CAP": "(.*Battery Capacity.*\\b(0?[1-9]|[1-9][0-9]|100)\\b)",
+    "UPS_RUNTIME": "(Remaining Runtime.*(?:\\b|-)([1-9]{1,2}[0]?|100)\\b min.)",
+    "UPS_STATE": "(.*State.*(Normal|Power Failure))"
+}

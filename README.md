@@ -27,7 +27,14 @@ This project is in it's very early stages and will have many bugs and missing fe
 npm run prod 
 ``` 
 
-## Endpoint
-Get UPS State via /alive endpoint ``` localhost:3939/api/v1/alive```
-- Possible return result of ```Normal``` or ```Battery Power```
+## Endpoints
+Get UPS State via /alive endpoint: ``` localhost:3939/api/v1/alive```
+- Possible return result of ```Normal``` or ```Power Failure```
     - Refer to CyberPower [documention](https://www.cyberpowersystems.com/product/software/power-panel-personal/powerpanel-for-linux/) for more info on possible returned values.
+
+Get UPS Stats via /runtime /capacity endpoints: ``` localhost:3939/api/v1/runtime ``` or ``` /capacity ```
+- ``` /runtime ``` endpoint - Runtime left on Battery Power at a given time
+    - Possible return results of value between 0 and match run time at load in minutes
+    - Will return formated and raw value of resulting time left
+- ``` /capacity ``` end point - Capacity left on the battery at a given time
+    - Possible return results of value between 0 and 100 %
