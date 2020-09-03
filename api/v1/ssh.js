@@ -5,7 +5,7 @@ var fs = require('fs');
 
 var generalSSHQuery = function(command, host, username, portNumber, privateKeyPath, callback){
   var conn = new Client();    
-
+  
     conn.on('ready', function() {
    // console.log('Client :: ready');
       conn.exec(command, function(err, stream) {
